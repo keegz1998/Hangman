@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+  }
+  /*Style body of page*/
+  body {
+    background-color: #3f4244;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  h1 {
+    margin: 20px 0 0;
+  }
+  /*Style container that contains all elements related to the Game*/
+  .game-container {
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    width: 450px;
+  }
+  /*Style container that is used to contain the hangman stick figure*/
+  .figure-container {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+  }
+  /*Set each svg component to display of none and change them to display when user enters wrong character*/
+  .figure-part {
+    display: none;
+  }
+  /*Container to display the wrong letters entered*/
+  .wrong-letters-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+  
+  .wrong-letters-container p {
+    margin: 0 0 5px;
+  }
+  
+  .wrong-letters-container span {
+    font-size: 24px;
+  }
+  /*Style the div that is used to display the characters of the word*/
+  .word {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /*Style the letters in the word div*/
+  .letter {
+    border-bottom: 3px solid #ffffff;
+    display: inline-flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    height: 50px;
+    width: 20px;
+  }
+  /*Style container used to inform user if they have won or lost*/
+  .popup-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;   
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup {
+    background: #506e83;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .popup button {
+    cursor: pointer;
+    background-color: #fff;
+    color: #506e83;;
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  
+  .popup button:active {
+    transform: scale(0.98);
+  }
+  
+  .popup button:focus {
+    outline: 0;
+  }
+  /* Style container that is used to notify if user entered repeat characters*/
+
+  .notification-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .notification-container p {
+    margin: 0;
+  }
+  
+  .notification-container.show {
+    transform: translateY(-50px);
+  }
+
+
+    /*Style container used to inform user the rules*/
+    .rules-container {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 10px 10px 0 0;
+      padding: 15px 20px;
+      position: absolute;
+      bottom: -180px;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .rules-container p {
+      margin: 0;
+    }
+    
+    .rules-container.show {
+      transform: translateY(-300px);
+    }
+    .btnBlock{
+      width: auto;
+      text-align: center;
+      
+    }
+    .btnBlock button{
+     margin-left: 2%;
+     cursor: pointer;
+    background-color: #fff;
+    color: #506e83;;
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+      
+    }
+    
